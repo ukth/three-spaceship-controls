@@ -1,0 +1,35 @@
+{
+  "name": "three-spaceship-controls",
+  "version": "0.3.1",
+  "description": "A threejs spaceship-style control with keyboard.",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./src/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "yarn clean && yarn build:tsc && yarn build:js",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rm -rf dist"
+  },
+  "author": "ukth <ukth.dev@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "@types/three": "^0.165.0",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "three": "^0.165.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "lib": ["es5", "es6", "dom"],
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true
+  },
+  "include": ["src/index.ts"]
+}
