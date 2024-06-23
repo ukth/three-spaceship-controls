@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/username/repo/blob/main/LICENSE)
 
-A brief description of the project.
+A threejs spaceship-style control with keyboard.
 
 ## Installation
 
@@ -32,6 +32,8 @@ const animate = () => {
   window.requestAnimationFrame(animate);
 };
 ```
+
+Control the spaceship with W,A,D,Q,E
 
 ## License
 

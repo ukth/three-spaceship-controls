@@ -1,6 +1,6 @@
 {
   "name": "three-spaceship-controls",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A threejs spaceship-style control with keyboard.",
   "main": "dist/index.js",
   "exports": {
@@ -21,6 +21,7 @@
     "build:js": "node build.js",
     "clean": "rm -rf dist"
   },
+  "repository": "github:ukth/three-spaceship-controls",
   "author": "ukth <ukth.dev@gmail.com>",
   "license": "MIT",
   "type": "module",
