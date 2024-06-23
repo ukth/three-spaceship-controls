@@ -65,7 +65,7 @@ Control the spaceship with W,A,D,Q,E
 
 #### Methods
 
-#### `update(delta)`
+##### `update(delta)`
 
 Updates the position of the camera and spaceship.
 
@@ -73,7 +73,7 @@ Updates the position of the camera and spaceship.
 
 - `delta` (number): The time elapsed in seconds to update the positions.
 
-#### `setKeyBindings(keyBindings)`
+##### `setKeyBindings(keyBindings)`
 
 Sets the key bindings for the controls.
 
@@ -100,7 +100,3 @@ controls.setKeyBindings({
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-```
-
-```
