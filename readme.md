@@ -1,6 +1,6 @@
 # three-spaceship-controls
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/username/repo/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ukth/three-spaceship-controls)
 [![npm version](https://badge.fury.io/js/three-spaceship-controls.svg)](https://www.npmjs.com/package/three-spaceship-controls)
 
 **This project is in beta version.**
