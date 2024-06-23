@@ -1,6 +1,6 @@
 {
   "name": "three-spaceship-controls",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A threejs spaceship-style control with keyboard.",
   "main": "dist/index.js",
   "exports": {

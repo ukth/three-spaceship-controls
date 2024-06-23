@@ -2,6 +2,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/username/repo/blob/main/LICENSE)
 
+**This project is in beta version.**
+
 A threejs spaceship-style control with keyboard.
 
 ## Installation
