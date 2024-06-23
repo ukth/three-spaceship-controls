@@ -1,4 +1,4 @@
-import { Camera, EventDispatcher, Object3D, Vector3 } from "three";
+import { Camera, Object3D, Vector3 } from "three";
 
 // EventDispatcher
 class SpaceShipControls {
@@ -26,7 +26,7 @@ class SpaceShipControls {
 
   cameraAngle: number;
   cameraDistance: number;
-  cameraFollowing: number;
+  private cameraFollowing: number;
   maxCameraFollowing: number;
   cameraFollowingWeight: number;
   cameraVerticalFollowing: number;
@@ -63,12 +63,6 @@ class SpaceShipControls {
     // Set to false to disable this control
     this.enabled = true;
 
-    // this.movementSpeed = 1.0;
-    // this.rollSpeed = 0.005;
-
-    // this.dragToLook = false;
-    // this.autoForward = false;
-
     this.acceleration = 0.6;
     this.minSpeed = 0.5;
     this.maxSpeed = 10;
@@ -96,37 +90,11 @@ class SpaceShipControls {
 
     const scope = this;
 
-    // const EPS = 0.000001;
-
-    // const lastQuaternion = new Quaternion();
-    // const lastPosition = new Vector3();
-
-    // this.tmpQuaternion = new Quaternion();
-
-    // this.status = 0;
-
-    // this.moveState = {
-    //   up: 0,
-    //   down: 0,
-    //   left: 0,
-    //   right: 0,
-    //   forward: 0,
-    //   back: 0,
-    //   pitchUp: 0,
-    //   pitchDown: 0,
-    //   yawLeft: 0,
-    //   yawRight: 0,
-    //   rollLeft: 0,
-    //   rollRight: 0,
-    // };
-    // this.moveVector = new Vector3(0, 0, 0);
-    // this.rotationVector = new Vector3(0, 0, 0);
-
     window.addEventListener("keydown", this.keydown);
     window.addEventListener("keyup", this.keyup);
   }
 
-  keydown = (event: KeyboardEvent) => {
+  private keydown = (event: KeyboardEvent) => {
     if (event.altKey || this.enabled === false) {
       return;
     }
@@ -157,7 +125,7 @@ class SpaceShipControls {
     // this.updateRotationVector();
   };
 
-  keyup = (event: KeyboardEvent) => {
+  private keyup = (event: KeyboardEvent) => {
     if (this.enabled === false) return;
 
     switch (event.code) {
@@ -181,7 +149,7 @@ class SpaceShipControls {
     }
   };
 
-  updatetarget = (delta: number) => {
+  private updatetarget = (delta: number) => {
     if (this.keys.accelerate) {
       this.cameraFollowing += delta;
       if (this.cameraFollowing > this.maxCameraFollowing) {
@@ -263,7 +231,7 @@ class SpaceShipControls {
     this.target.position.copy(nextPosition);
   };
 
-  updateCamera = () => {
+  private updateCamera = () => {
     const angle =
       this.cameraAngle - this.verticalSpeed * this.cameraVerticalFollowing;
 
@@ -292,6 +260,16 @@ class SpaceShipControls {
 
     this.updatetarget(delta);
     this.updateCamera();
+  };
+
+  setKeyBindings = (keyBindings: {
+    accelerate: string;
+    rotateLeft: string;
+    rotateRight: string;
+    rotateUp: string;
+    rotateDown: string;
+  }) => {
+    this.keyBindings = keyBindings;
   };
 }
 
